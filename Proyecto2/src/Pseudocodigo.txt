@@ -27,3 +27,11 @@ def recomendar(nombre):
         return list(jugadores[ranking][1:])
     else:
         return []
+# Prueba
+nombre_busqueda = input("Ingrese el nombre de un equipo o jugador: ")
+resultado = recomendar(nombre_busqueda)
+if len(resultado) > 0:
+    print("Los 5 equipos o jugadores más similares a", nombre_busqueda, "son:", resultado)
+else:
+    print("Lo siento, no se encontró ningún equipo o jugador con el nombre", nombre_busqueda
+

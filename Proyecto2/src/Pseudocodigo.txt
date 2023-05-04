@@ -1,0 +1,6 @@
+import numpy as np
+
+# Carga de datos
+partidos = np.load('datos_partidos.npy')
+jugadores = np.load('datos_jugadores.npy')
+equipos = np.load('datos_equipos.npy')

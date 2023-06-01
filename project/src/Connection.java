@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package project;
+package projectequipos;
 
 import org.neo4j.driver.AuthTokens;
 import org.neo4j.driver.Config;
@@ -21,8 +21,21 @@ import java.util.logging.Logger;
  * @author Jorge
  */
 public class Connection {
-    private final String URI = "neo4j+s://09b0ed38.databases.neo4j.io";
-    private final String USER = "neo4j";
-    private final String PASSWORD = "p4L9SK7o2r_9f-ltj-Co2nLTEW4ImJntnjiwRrM45Ks";
-}
+    private final String URI= "neo4j+s://09b0ed38.databases.neo4j.io";
+    private final String USER="neo4j";
+    private final String PASSWORD="p4L9SK7o2r_9f-ltj-Co2nLTEW4ImJntnjiwRrM45Ks";
 
+    private final Driver driver;
+    public Connection() {
+        driver = GraphDatabase.driver(URI, AuthTokens.basic(USER, PASSWORD));
+    }
+
+    public Driver getDriver() {
+        return driver;
+    }
+
+    public void close() {
+        // The driver object should be closed before the application ends.
+        driver.close();
+    }
+}

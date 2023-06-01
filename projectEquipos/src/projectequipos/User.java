@@ -16,8 +16,9 @@ public class User {
 
     private String password;
 
-    private String favoriteLiga;
     
+    private String favoriteLiga;
+
     private String pais;
 
     public User(String name, String username, String password, String favoriteLiga, String pais) {

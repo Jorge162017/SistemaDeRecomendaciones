@@ -7,7 +7,7 @@ package projectequipos;
 
 /**
  *
- * @author Jorge
+ * @author Jose Gramajo
  */
 public class User {
     private String name;
@@ -23,4 +23,49 @@ public class User {
         this.favoriteLiga = favoriteLiga;
         this.pais = pais;
     }
+
+
+
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
+    public String getFavoriteLiga() {
+        return favoriteLiga;
+    }
+
+    public void setFavoriteLiga(String favoriteLiga) {
+        this.favoriteLiga = favoriteLiga;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public void setPais(String pais) {
+        this.pais = pais;
+    }
+
+
 }

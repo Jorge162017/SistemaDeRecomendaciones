@@ -18,7 +18,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
  *
- * @author Jorge
+ * @author Jose Gramajo
  */
 public class Connection {
     private final String URI= "neo4j+s://09b0ed38.databases.neo4j.io";

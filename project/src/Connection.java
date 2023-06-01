@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package projectequipos;
 
 import org.neo4j.driver.AuthTokens;
@@ -18,6 +13,9 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
  *
+ * The Connection class represents a connection to a Neo4j database.
+ * It provides methods to establish and close the connection.
+ *
  * @author Jose Gramajo
  */
 public class Connection {
@@ -26,14 +24,27 @@ public class Connection {
     private final String PASSWORD="p4L9SK7o2r_9f-ltj-Co2nLTEW4ImJntnjiwRrM45Ks";
 
     private final Driver driver;
+
+ /**
+ * Constructs a new Connection object and establishes a connection to the Neo4j database.
+ */
     public Connection() {
         driver = GraphDatabase.driver(URI, AuthTokens.basic(USER, PASSWORD));
     }
 
+    /**
+     * Returns the Neo4j Driver object associated with this connection.
+     *
+     * @return the Neo4j Driver object
+     */
     public Driver getDriver() {
         return driver;
     }
 
+    /**
+     * Closes the connection to the Neo4j database.
+     * It is important to call this method when the application ends to release resources properly.
+     */
     public void close() {
         // The driver object should be closed before the application ends.
         driver.close();

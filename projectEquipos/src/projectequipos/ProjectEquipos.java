@@ -162,6 +162,9 @@ public class ProjectEquipos {
             e.printStackTrace();
         }  
     }
+    
+    
+    
     public void equiposByPais(){
         HashMap<String, Object> parameters = new HashMap<String, Object>();
         parameters.put("pais", user.getPais());         

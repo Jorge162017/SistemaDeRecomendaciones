@@ -20,7 +20,9 @@ import java.util.logging.Logger;
  *
  * @author Jorge
  */
-public class Connection {
+
+ 
+ public class Connection {
     private final String URI= "neo4j+s://09b0ed38.databases.neo4j.io";
     private final String USER="neo4j";
     private final String PASSWORD="p4L9SK7o2r_9f-ltj-Co2nLTEW4ImJntnjiwRrM45Ks";
